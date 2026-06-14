@@ -1,5 +1,7 @@
 # 基于 Plant Simulation 的智能工厂多 AGV 路径规划与交通管制仿真
 
+我分享这个项目的原因是因为我在做Plant Simulation大作业的时候，发现网上关于这部分的教程太少了，我也是一边摸索，一边借助AI工具用了很久时间才慢慢摸索出来的。所以我想着把这个我做了差不多的项目分享出来，如果有人需要的话可以直接使用。下面就是我用AI生成的项目描述，如果你需要写报告的话可以参考一下。
+
 本项目基于 **Tecnomatix Plant Simulation 2302** 搭建了一个智能工厂多 AGV 物料搬运仿真模型。模型围绕“多 AGV 任务调度、路径运行控制、交通冲突管制、低电量自动充电和实验结果统计”展开，模拟 AGV 在仓库、多个工位、充电站和双向单车道路网中的连续搬运过程。
 
 需要说明的是，当前模型采用的是 **规则式分段路径控制 + 方向锁/节点锁交通管制** 方法，并未完整实现 A\*、Dijkstra 或 D\* Lite 等标准图搜索算法。模型重点放在 Plant Simulation 中真实 AGV 运行、任务调度、交通管制和充电策略的搭建与验证上。
@@ -220,62 +222,6 @@ AGV 重新进入 Idle 状态
 
 ---
 
-## 12. 项目不足
-
-当前模型仍存在一些不足：
-
-1. 路径控制主要基于规则式分段方法，尚未实现完整 A\*、Dijkstra 或 D\* Lite 路径搜索；
-2. 当前模型还没有实现实时拥堵情况下的全局动态重规划；
-3. 电量消耗主要按照行驶距离估算，未细分空载、载货、转弯、等待等不同状态；
-4. 路网结构相对规则，复杂车间布局下还需要进一步优化；
-5. 调度策略仍以规则方法为主，尚未引入智能优化算法。
-
----
-
-## 13. 后续改进方向
-
-后续可从以下几个方面继续优化：
-
-1. 基于 `NodeTable` 和 `EdgeTable` 实现 A\* 或 Dijkstra 路径搜索；
-2. 引入实时拥堵权重，实现动态路径重规划；
-3. 优化电量消耗模型，区分空载、载货和等待状态；
-4. 增加 AGV 数量和任务密度，测试高负载情况下的运行稳定性；
-5. 增加结果自动导出功能，将 `ResultTable` 导出为 CSV 或 Excel；
-6. 尝试引入遗传算法、蚁群算法或强化学习方法优化多 AGV 调度。
-
----
-
-## 14. 仓库结构建议
-
-```text
-Plant-Simulation-Multi-AGV-Dispatch/
-├─ README.md
-├─ model/
-│  └─ Multi_AGV_Dispatch_Charging.spp
-├─ docs/
-│  └─ 多AGV物流搬运系统仿真优化报告.docx
-├─ screenshots/
-│  ├─ assignment_requirements.jpg
-│  ├─ model_overview.png
-│  ├─ agv_running.png
-│  ├─ chart_time.png
-│  ├─ chart_distance.png
-│  ├─ chart_battery.png
-│  ├─ task_table.png
-│  ├─ agv_table.png
-│  └─ result_table.png
-├─ simtalk/
-│  ├─ main_control.txt
-│  ├─ dispatch_and_execute.txt
-│  ├─ path_control.txt
-│  ├─ charging_strategy.txt
-│  └─ result_statistics.txt
-└─ results/
-   └─ experiment_results.csv
-```
-
----
-
-## 15. 说明
+## 13. 说明
 
 本项目主要用于课程学习和仿真实验展示，模型文件需要使用 Tecnomatix Plant Simulation 打开。当前模型重点展示多 AGV 任务调度、分段路径控制、交通冲突处理、自动充电和结果可视化逻辑，尚未达到工业级调度系统的完整程度。
