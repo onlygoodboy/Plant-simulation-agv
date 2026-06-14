@@ -10,7 +10,7 @@
 
 本项目对应课程任务为“智能工厂 AGV 路径规划与交通管制”。作业要求主要包括车间布局建模、任务生成、路径网络与交通管制设计、仿真运行、优化和报告撰写等内容。
 
-![作业任务要求](./assets/assignment_requirements.jpg)
+![作业任务要求][(./assets/assignment_requirements.jpg](https://github.com/onlygoodboy/Plant-simulation-agv-/blob/main/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE.jpg))
 
 ---
 
