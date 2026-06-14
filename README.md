@@ -20,7 +20,6 @@
 
 下图为最终整理后的 Plant Simulation 模型界面。模型界面按照功能分为核心数据表区、扩展表区、模型主体区、主流程控制方法区、路径与锁控制方法区、辅助函数区、实验辅助区和结果可视化区。
 
-![Plant Simulation 模型截图](https://github.com/onlygoodboy/Plant-simulation-agv-/blob/main/%E6%A8%A1%E5%9E%8B%E6%88%AA%E5%9B%BE.png)
 <img width="1458" height="672" alt="image" src="https://github.com/user-attachments/assets/931336e9-5b73-4764-8799-a7a3852034f6" />
 
 ---
@@ -229,32 +228,32 @@ AGV 重新进入 Idle 状态
 
 ## 13. 运行流程
 如果只想查看仿真效果的话，直接点击开始仿真就行。如果想使用我这个三个策略的对比报告数据的话按下面的步骤来就行。
-1. 首先右键点击ClearFinalResults，然后运行来清除上次的数据。
+### 1. 首先右键点击ClearFinalResults，然后运行来清除上次的数据。
 <img width="288" height="204" alt="image" src="https://github.com/user-attachments/assets/4a99c771-c92a-4f19-a456-00366b392c16" />
 
-2. 再设置 StrategyMode = 1
+### 2. 再设置 StrategyMode = 1
 <img width="260" height="126" alt="image" src="https://github.com/user-attachments/assets/bb5efca5-ae53-45c0-89df-cb5c4a672e89" />
 <img width="612" height="345" alt="image" src="https://github.com/user-attachments/assets/be9a1883-6eb2-4ff9-9b67-2a17afa9077b" />
 
-3. 打开事件控制器，设定运行时间，我设定的是运行2个小时，你可以自己设定。然后点击开始仿真，再点击快进仿真。
+### 3. 打开事件控制器，设定运行时间，我设定的是运行2个小时，你可以自己设定。然后点击开始仿真，再点击快进仿真。
 <img width="276" height="153" alt="image" src="https://github.com/user-attachments/assets/26c1f706-e04e-45d0-9eb6-6bf53ba064e9" />
 <img width="276" height="282" alt="image" src="https://github.com/user-attachments/assets/07510b1c-32d5-4e9c-9606-9f29506b7433" />
 <img width="275" height="296" alt="image" src="https://github.com/user-attachments/assets/d0c85bae-1a6b-4749-aa26-368ae1bd0db0" />
 
-4. 右键点击UpdateResultTable，然后运行来记录这次的数据。
+### 4. 右键点击UpdateResultTable，然后运行来记录这次的数据。
 <img width="237" height="192" alt="image" src="https://github.com/user-attachments/assets/6582d5fb-3b5c-498b-a0c9-17e7017d593b" />
 可以点击ResultTable查看数据
 <img width="279" height="135" alt="image" src="https://github.com/user-attachments/assets/bbfbd67d-2a42-416b-a6c5-aa22b2bac2d8" />
 <img width="1655" height="708" alt="image" src="https://github.com/user-attachments/assets/fabc4ded-b118-4544-8ebb-9b89b082135e" />
 
-5. 把StrategyMode分别设置为2和3之后重复第3和第4步。
+### 5. 把StrategyMode分别设置为2和3之后重复第3和第4步。
 
-6. 右键点击UpdateChartTable，然后运行就可以把最新三次的实验数据整理到ChartTable里。
+### 6. 右键点击UpdateChartTable，然后运行就可以把最新三次的实验数据整理到ChartTable里。
 <img width="219" height="189" alt="image" src="https://github.com/user-attachments/assets/22350dc5-f293-4a4c-bd53-b9d850ba13dc" />
 <img width="225" height="108" alt="image" src="https://github.com/user-attachments/assets/4ca62492-f031-45ba-911f-8b7f90c2934b" />
 <img width="1626" height="261" alt="image" src="https://github.com/user-attachments/assets/edc16d6d-d867-4a82-81f0-bec7017a9e38" />
 
-7. 然后分别点击图表区的三个图表，然后点击显示图表就可以看到对比的图表了。
+### 7. 然后分别点击图表区的三个图表，然后点击显示图表就可以看到对比的图表了。
 <img width="207" height="132" alt="image" src="https://github.com/user-attachments/assets/a10e1344-e6af-4a8e-8201-e9b9aa61360e" />
 <img width="930" height="503" alt="image" src="https://github.com/user-attachments/assets/3af4a5d3-87ba-4c90-bbcb-8ad8555c7036" />
 
@@ -267,3 +266,182 @@ Chart_Distance 用于展示三种调度策略下 AGV 的总行驶距离对比。
 
 Chart_Battery 用于展示三种调度策略下 AGV 的平均剩余电量情况。该图可以辅助分析不同调度策略对车辆电量状态的影响。结果显示，策略3的平均剩余电量最高，说明在当前任务分配和充电策略共同作用下，AGV 能够保持较好的电量水平。虽然平均电量还会受到充电次数和充电时机影响，但该结果可以说明策略3在减少无效行驶和维持车辆持续运行方面表现更稳定。
 <img width="420" height="378" alt="image" src="https://github.com/user-attachments/assets/f535342c-e38a-4d45-a036-55ccd6bf8a0e" />
+
+
+## 13. 运行流程
+
+如果只是想查看 AGV 仿真动画效果，可以直接点击 Plant Simulation 的开始仿真按钮运行模型。
+如果需要复现实验结果，并生成三种调度策略的对比数据与图表，可以按照以下步骤操作。
+
+### 13.1 清空上一次实验结果
+
+首先右键点击 `ClearFinalResults` 方法，并选择运行，用于清除上一次正式实验留下的数据，避免新旧实验结果混在一起。
+
+<p align="center">
+  <img width="288" height="204" alt="运行 ClearFinalResults" src="https://github.com/user-attachments/assets/4a99c771-c92a-4f19-a456-00366b392c16" />
+</p>
+
+---
+
+### 13.2 设置第一组调度策略
+
+打开 `ConfigTable`，将 `StrategyMode` 设置为 `1`。
+其中，三种策略含义如下：
+
+| StrategyMode | 调度策略     | 含义                           |
+| -----------: | -------- | ---------------------------- |
+|            1 | 先来先服务策略  | 按任务生成顺序依次分配任务                |
+|            2 | 紧急任务优先策略 | 优先处理 `Urgent` 急单任务           |
+|            3 | 综合调度策略   | 综合考虑任务紧急程度、AGV 到取货点距离和任务等待时间 |
+
+<p align="center">
+  <img width="260" height="126" alt="设置 StrategyMode" src="https://github.com/user-attachments/assets/bb5efca5-ae53-45c0-89df-cb5c4a672e89" />
+</p>
+
+<p align="center">
+  <img width="612" height="345" alt="ConfigTable 设置 StrategyMode" src="https://github.com/user-attachments/assets/be9a1883-6eb2-4ff9-9b67-2a17afa9077b" />
+</p>
+
+---
+
+### 13.3 设置仿真时间并运行模型
+
+打开事件控制器，设置仿真运行时间。本项目实验中统一设置为 **2 小时**，即 `7200 s`。
+设置完成后，点击开始仿真，并根据需要使用快进功能加速仿真过程。
+
+<p align="center">
+  <img width="276" height="153" alt="打开事件控制器" src="https://github.com/user-attachments/assets/26c1f706-e04e-45d0-9eb6-6bf53ba064e9" />
+</p>
+
+<p align="center">
+  <img width="276" height="282" alt="设置仿真时间" src="https://github.com/user-attachments/assets/07510b1c-32d5-4e9c-9606-9f29506b7433" />
+</p>
+
+<p align="center">
+  <img width="275" height="296" alt="开始并快进仿真" src="https://github.com/user-attachments/assets/d0c85bae-1dbd-4749-aa26-368ae1bd0db0" />
+</p>
+
+---
+
+### 13.4 记录本次仿真结果
+
+仿真运行到设定时间后，右键点击 `UpdateResultTable` 方法并运行，将当前策略下的实验结果写入 `ResultTable`。
+
+<p align="center">
+  <img width="237" height="192" alt="运行 UpdateResultTable" src="https://github.com/user-attachments/assets/6582d5fb-3b5c-498b-a0c9-17e7017d593b" />
+</p>
+
+运行完成后，可以打开 `ResultTable` 查看本次实验数据。
+
+<p align="center">
+  <img width="279" height="135" alt="打开 ResultTable" src="https://github.com/user-attachments/assets/bbfbd67d-2a42-416b-a6c5-aa22b2bac2d8" />
+</p>
+
+<p align="center">
+  <img width="1655" height="708" alt="ResultTable 实验结果" src="https://github.com/user-attachments/assets/fabc4ded-b118-4544-8ebb-9b89b082135e" />
+</p>
+
+---
+
+### 13.5 重复运行策略 2 和策略 3
+
+完成 `StrategyMode = 1` 的实验后，分别将 `StrategyMode` 设置为 `2` 和 `3`，并重复以下步骤：
+
+```text
+设置 StrategyMode
+↓
+ResetRealState
+↓
+StartRealSimulation
+↓
+运行到 7200 s
+↓
+UpdateResultTable
+```
+
+最终，`ResultTable` 中会分别记录三种调度策略的实验结果。
+
+---
+
+### 13.6 更新图表数据
+
+三组实验全部完成后，右键点击 `UpdateChartTable` 方法并运行。
+该方法会从 `ResultTable` 中提取最新的三组策略结果，并整理到 `ChartTable` 中，供图表对象读取。
+
+<p align="center">
+  <img width="219" height="189" alt="运行 UpdateChartTable" src="https://github.com/user-attachments/assets/22350dc5-f293-4a4c-bd53-b9d850ba13dc" />
+</p>
+
+<p align="center">
+  <img width="225" height="108" alt="打开 ChartTable" src="https://github.com/user-attachments/assets/4ca62492-f031-45ba-911f-8b7f90c2934b" />
+</p>
+
+<p align="center">
+  <img width="1626" height="261" alt="ChartTable 数据" src="https://github.com/user-attachments/assets/edc16d6d-d867-4a82-81f0-bec7017a9e38" />
+</p>
+
+---
+
+### 13.7 查看对比图表
+
+最后，分别点击结果可视化区中的三个图表对象：
+
+```text
+Chart_Time
+Chart_Distance
+Chart_Battery
+```
+
+打开图表对象后，点击“显示图表”，即可查看三种调度策略的对比结果。
+
+<p align="center">
+  <img width="207" height="132" alt="结果可视化区图表对象" src="https://github.com/user-attachments/assets/a10e1344-e6af-4a8e-8201-e9b9aa61360e" />
+</p>
+
+<p align="center">
+  <img width="930" height="503" alt="显示图表" src="https://github.com/user-attachments/assets/3af4a5d3-87ba-4c90-bbcb-8ad8555c7036" />
+</p>
+
+---
+
+## 14. 图表含义
+
+为了更直观地展示三种调度策略的实验结果，模型中设置了三个图表对象，分别用于展示时间指标、总行驶距离和平均剩余电量。相比只查看 `ResultTable`，图表能够更直接地反映不同策略之间的性能差异。
+
+### 14.1 Chart_Time：时间指标对比图
+
+`Chart_Time` 用于展示三种调度策略下的时间指标对比，主要包括 **平均完成时间** 和 **平均等待时间**。通过该图可以直观看出，不同任务分配策略会影响 AGV 系统的任务响应效率。其中，策略 3 的平均完成时间和平均等待时间均低于策略 1 和策略 2，说明综合考虑任务优先级、AGV 当前位置和任务等待时间后，系统能够更合理地分配车辆，减少任务排队等待，提高整体搬运效率。
+
+<p align="center">
+  <img width="420" height="380" alt="Chart_Time 时间指标对比图" src="https://github.com/user-attachments/assets/893c35c3-0582-490e-af2d-92317c3497a2" />
+</p>
+
+---
+
+### 14.2 Chart_Distance：总行驶距离对比图
+
+`Chart_Distance` 用于展示三种调度策略下 AGV 的 **总行驶距离** 对比。该图主要反映不同调度策略是否会造成 AGV 过多空驶或绕行。从结果来看，策略 3 的总行驶距离最短，说明“紧急优先 + 最近 AGV + 等待补偿”的综合调度策略能够减少不必要的跨区域调度，使 AGV 尽量选择距离任务起点较近的车辆执行任务，从而降低系统总运行距离。
+
+<p align="center">
+  <img width="420" height="378" alt="Chart_Distance 总行驶距离对比图" src="https://github.com/user-attachments/assets/849d75e2-9c7d-40a3-8305-5e8a9bec41ae" />
+</p>
+
+---
+
+### 14.3 Chart_Battery：平均剩余电量对比图
+
+`Chart_Battery` 用于展示三种调度策略下 AGV 的 **平均剩余电量** 情况。该图可以辅助分析不同调度策略对车辆电量状态的影响。结果显示，策略 3 的平均剩余电量最高，说明在当前任务分配和充电策略共同作用下，AGV 能够保持较好的电量水平。虽然平均电量还会受到充电次数和充电时机影响，但该结果可以说明策略 3 在减少无效行驶和维持车辆持续运行方面表现更稳定。
+
+<p align="center">
+  <img width="420" height="378" alt="Chart_Battery 平均剩余电量对比图" src="https://github.com/user-attachments/assets/f535342c-e38a-4d45-a036-55ccd6bf8a0e" />
+</p>
+
+---
+
+### 14.4 图表指标汇总
+
+| 图表对象             | 展示指标          | 主要作用                |
+| ---------------- | ------------- | ------------------- |
+| `Chart_Time`     | 平均完成时间、平均等待时间 | 分析任务响应效率和完成效率       |
+| `Chart_Distance` | 总行驶距离         | 分析 AGV 空驶、绕行和整体运行距离 |
+| `Chart_Battery`  | 平均剩余电量        | 分析车辆电量状态和充电策略效果     |
