@@ -18,8 +18,8 @@
 
 下图为最终整理后的 Plant Simulation 模型界面。模型界面按照功能分为核心数据表区、扩展表区、模型主体区、主流程控制方法区、路径与锁控制方法区、辅助函数区、实验辅助区和结果可视化区。
 
-![Plant Simulation 模型截图](./assets/model_overview.png)
-https://github.com/onlygoodboy/Plant-simulation-agv-/blob/main/%E6%A8%A1%E5%9E%8B%E6%88%AA%E5%9B%BE.png
+![Plant Simulation 模型截图](https://github.com/onlygoodboy/Plant-simulation-agv-/blob/main/%E6%A8%A1%E5%9E%8B%E6%88%AA%E5%9B%BE.png)
+
 ---
 
 ## 3. 项目背景
