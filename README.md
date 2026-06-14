@@ -10,7 +10,7 @@
 
 本项目对应课程任务为“智能工厂 AGV 路径规划与交通管制”。作业要求主要包括车间布局建模、任务生成、路径网络与交通管制设计、仿真运行、优化和报告撰写等内容。
 
-![作业任务要求][(./assets/assignment_requirements.jpg](https://github.com/onlygoodboy/Plant-simulation-agv-/blob/main/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE.jpg))
+![作业任务要求](https://github.com/onlygoodboy/Plant-simulation-agv-/blob/main/%E4%BD%9C%E4%B8%9A%E6%88%AA%E5%9B%BE.jpg)
 
 ---
 
@@ -19,7 +19,7 @@
 下图为最终整理后的 Plant Simulation 模型界面。模型界面按照功能分为核心数据表区、扩展表区、模型主体区、主流程控制方法区、路径与锁控制方法区、辅助函数区、实验辅助区和结果可视化区。
 
 ![Plant Simulation 模型截图](./assets/model_overview.png)
-
+https://github.com/onlygoodboy/Plant-simulation-agv-/blob/main/%E6%A8%A1%E5%9E%8B%E6%88%AA%E5%9B%BE.png
 ---
 
 ## 3. 项目背景
